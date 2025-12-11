@@ -1,26 +1,71 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-button-outline: #F4F4F9;
+  --color-badge-outline: rgba(255,255,255,0.05);
+  --color-opaque-button-border-intensity: 9;
+
+  --color-elevate-1: rgba(255,255,255,0.04);
+  --color-elevate-2: rgba(255,255,255,0.09);
+
+  --color-background: #293735;         
+  --color-foreground: #3FC495;         
+  --color-border: #217D57;             
+  --color-card: #1a1a1a;               
+  --color-card-foreground: #e6e6e6;    
+  --color-card-border: #262626;        
+
+  --color-sidebar: #1e1e1e;            
+  --color-sidebar-foreground: #e6e6e6; 
+  --color-sidebar-border: #2e2e2e;     
+  --color-sidebar-primary: #87b88f;    
+  --color-sidebar-primary-foreground: #1a1a1a;
+  --color-sidebar-accent: #3a3320;     
+  --color-sidebar-accent-foreground: #d9d9d9;
+  --color-sidebar-ring: #87b88f;      
+  --color-popover: #242424;             
+  --color-popover-foreground: #e6e6e6;  
+  --color-popover-border: #333333;      
+
+  --color-primary: #217D57;             
+  --color-primary-foreground: #f2f2f2;  
+  --color-secondary: #2e2e2e;           
+  --color-secondary-foreground: #d9d9d9; 
+  --color-accent: #332e29;           
+  --color-accent-foreground: #d9d9d9
+  --color-destructive: #bf3f3f;     
+  --color-destructive-foreground: #f2f2f2;
+  --color-muted-foreground: #D6E8D3;    
+  /* --color-muted-foreground: #DAECDB;     */
+  --color-muted: #F4F4F9;    
+
+  --color-input: #404040;             
+  --color-ring: #87b88f;              
+  --color-chart-1: #68a882;           
+  --color-chart-2: #bfbf96;          
+  --color-chart-3: #a99f66;           
+  --color-chart-4: #6699b2;          
+  --color-chart-5: #a366b2;          
+
+  --shadow-2xs: 0px 2px 0px 0px rgba(0,0,0,0.02);
+  --shadow-xs: 0px 2px 0px 0px rgba(0,0,0,0.04);
+  --shadow-sm: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 1px 2px -1px rgba(0,0,0,0.08);
+  --shadow: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 1px 2px -1px rgba(0,0,0,0.08);
+  --shadow-md: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 2px 4px -1px rgba(0,0,0,0.08);
+  --shadow-lg: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 4px 6px -1px rgba(0,0,0,0.08);
+  --shadow-xl: 0px 2px 0px 0px rgba(0,0,0,0.04), 0px 8px 10px -1px rgba(0,0,0,0.08);
+  --shadow-2xl: 0px 2px 0px 0px rgba(0,0,0,0.04);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+.hov-effect{
+  @apply bg-background/10 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted;
+}
+
+hov-effect:hover {
+  @apply bg-background/10 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted;
 }
