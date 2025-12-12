@@ -18,7 +18,7 @@ export function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
         <Image
-          src={"/herobackground.png"}
+          src="./herobackground.png"
           width={100} height={100}
           alt="Forest research background"
           className="w-full h-full object-cover"
