@@ -102,7 +102,7 @@ export default function PublicationsContent({
       </div> */}
 
       {/* Filters */}
-      <Card className="academic-card mb-8 bg-background/10 backdrop-blur-md border border-background/20 shadow-lg bg-linear-to-br from-white/10 to-transparent pointer-events-none">
+      <Card className="academic-card mb-8 bg-background/10 backdrop-blur-md border border-background/20 shadow-lg bg-linear-to-br from-white/10 to-transparent">
         <CardContent className="p-6">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1 relative">

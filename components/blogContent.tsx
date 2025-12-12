@@ -72,9 +72,9 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
                   <Card className="flex flex-col h-full">
                     <CardHeader>
                       <div className="flex items-center space-x-2 mb-3">
-                        <Badge variant="outline">{post.category}</Badge>
+                        <Badge variant="default">{post.category}</Badge>
                       </div>
-                      <CardTitle className="text-lg mb-3">{post.title}</CardTitle>
+                      <CardTitle className="text-lg mb-3 font-serif">{post.title}</CardTitle>
                       <CardDescription className="text-sm leading-relaxed">
                         {post.excerpt}
                       </CardDescription>
@@ -94,12 +94,12 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
                       </div>
                       <div className="flex flex-wrap gap-1 mb-4">
                         {post.tags.slice(0, 2).map((tag) => (
-                          <Badge key={tag} variant="secondary" className="text-xs">
+                          <Badge key={tag} variant="outline" className="text-xs">
                             {tag}
                           </Badge>
                         ))}
                         {post.tags.length > 2 && (
-                          <Badge variant="secondary" className="text-xs">
+                          <Badge variant="outline" className="text-xs">
                             +{post.tags.length - 2}
                           </Badge>
                         )}

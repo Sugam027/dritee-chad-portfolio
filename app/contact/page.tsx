@@ -6,6 +6,7 @@ import { Car } from 'lucide-react';
 import Link from 'next/link';
 import HeroSection from '@/components/herosection';
 
+
 export const metadata = {
   title: 'Contact | Research Portfolio',
   description: "Get in touch for research collaboration, questions, or discussions about sustainable agriculture and forestry.",

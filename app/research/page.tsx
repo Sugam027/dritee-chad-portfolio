@@ -38,7 +38,7 @@ export default function ResearchSection() {
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="space-y-2">
-                          <CardTitle className="text-xl">{project.title}</CardTitle>
+                          <CardTitle className="text-xl font-serif">{project.title}</CardTitle>
                           <div className="flex items-center space-x-4 text-sm text-muted-foreground">
                             <div className="flex items-center space-x-1">
                               <Calendar className="w-4 h-4" />
@@ -78,7 +78,7 @@ export default function ResearchSection() {
                       </div>
 
                       <Button 
-                        variant="outline" 
+                        variant="ghost" 
                         data-testid={`button-view-project-${project.id}`}
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />

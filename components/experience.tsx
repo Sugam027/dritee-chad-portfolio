@@ -1,6 +1,24 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
 
 export default function Experience(){
+
+  const experiences = [
+    {
+      title: "Project Officer",
+      organization: "SchEMS Consultancy",
+      description: "Wildlife & GIS specialist working on Environmental Impact Assessments including the Siddhartha Highway Improvement Project.",
+      date: "July 2025 - Present",},
+    {
+      title: "Data Analyst",
+      organization: "WWF Nepal",
+      description: "Snow Leopard monitoring, Tiger surveys, and spatial analysis for Terai Arc Landscape conservation programs.",
+      date: "2023 - 2025",},
+    {
+      title: "Research Assistant",
+      organization: "Greenhood Nepal",
+      description: "Himalayan medicinal plant conservation and bear poaching research with community engagement.",
+      date: "2024 - 2025",},
+  ];       
     return(
         <section className="py-12">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,50 +32,27 @@ export default function Experience(){
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card>
+            {experiences.map((exp, index) => (
+              
+            <Card key={index} className="flex flex-col h-full">
               <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div>
-                    <h3 className="font-semibold text-lg">Project Officer</h3>
-                    <p className="text-sm text-muted-foreground">SchEMS Consultancy</p>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div>
+                      <h3 className="font-semibold text-lg">{exp.title}</h3>
+                      <p className="text-sm text-muted-foreground">{exp.organization}</p>
+                    </div>
                   </div>
-                </div>
-                <p className="text-muted-foreground text-sm mb-3">
-                  Wildlife & GIS specialist working on Environmental Impact Assessments including the Siddhartha Highway Improvement Project.
-                </p>
-                <span className="text-xs text-primary font-medium">July 2025 - Present</span>
+                  <p className="text-muted-foreground text-sm">
+                    {exp.description}
+                  </p>
               </CardContent>
+              <CardFooter className="mt-auto">
+                <span className="text-xs text-muted font-medium">{exp.date}</span>
+              </CardFooter>
             </Card>
+            ))}
             
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div>
-                    <h3 className="font-semibold text-lg">Data Analyst</h3>
-                    <p className="text-sm text-muted-foreground">WWF Nepal</p>
-                  </div>
-                </div>
-                <p className="text-muted-foreground text-sm mb-3">
-                  Snow Leopard monitoring, Tiger surveys, and spatial analysis for Terai Arc Landscape conservation programs.
-                </p>
-                <span className="text-xs text-primary font-medium">2023 - 2025</span>
-              </CardContent>
-            </Card>
             
-            <Card>
-              <CardContent className="p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div>
-                    <h3 className="font-semibold text-lg">Research Assistant</h3>
-                    <p className="text-sm text-muted-foreground">Greenhood Nepal</p>
-                  </div>
-                </div>
-                <p className="text-muted-foreground text-sm mb-3">
-                  Himalayan medicinal plant conservation and bear poaching research with community engagement.
-                </p>
-                <span className="text-xs text-primary font-medium">2024 - 2025</span>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>

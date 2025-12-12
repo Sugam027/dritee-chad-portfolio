@@ -29,11 +29,11 @@
 
   --color-primary: #217D57;             
   --color-primary-foreground: #f2f2f2;  
-  --color-secondary: #2e2e2e;           
+  --color-secondary: #6E8894;           
   --color-secondary-foreground: #d9d9d9; 
-  --color-accent: #332e29;           
-  --color-accent-foreground: #d9d9d9
-  --color-destructive: #bf3f3f;     
+  --color-accent: #333138;           
+  --color-accent-foreground: #d9d9d9;
+  --color-destructive: #9A031E;     
   --color-destructive-foreground: #f2f2f2;
   --color-muted-foreground: #D6E8D3;    
   /* --color-muted-foreground: #DAECDB;     */
@@ -57,15 +57,33 @@
   --shadow-2xl: 0px 2px 0px 0px rgba(0,0,0,0.04);
 }
 
+:root {
+  --font-dm-serif: var(--font-dm-serif);
+  --font-noto-serif: var(--font-noto-serif);
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px var(--color-background) inset !important;
+    box-shadow: 0 0 0 1000px var(--color-background) inset !important;
+    -webkit-text-fill-color: var(--color-card-foreground) !important;
+    transition: background-color 99999s ease-in-out 0s;
+  }
+}
+
+.dm-serif {
+  font-family: var(--font-dm-serif), serif;
+}
+
+.noto-serif {
+  font-family: var(--font-noto-serif), serif;
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-.hov-effect{
-  @apply bg-background/10 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted;
+  font-family: var(--font-nota-serif), serif;
 }
 
-hov-effect:hover {
-  @apply bg-background/10 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted;
+
+body {
+
 }

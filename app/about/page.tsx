@@ -108,7 +108,7 @@ export default function AboutSection() {
             </div>
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
+                <CardTitle className="flex items-center space-x-2 font-serif">
                   <span>Experience</span>
                 </CardTitle>
               </CardHeader>
@@ -140,7 +140,7 @@ export default function AboutSection() {
             <Card className="bg-background/10 backdrop-blur-md border border-background/20 shadow-lg bg-linear-to-br from-white/10 to-transparent pointer-events-none">
                 <div className="prose prose-lg max-w-none">
                     <CardHeader>
-                        <CardTitle className="flex items-center space-x-2">
+                        <CardTitle className="flex items-center space-x-2 font-serif">
                         <span>About Me</span>
                         </CardTitle>
                     </CardHeader>
@@ -161,15 +161,14 @@ export default function AboutSection() {
                         {/* Skills */}
             <Card className="bg-background/10 backdrop-blur-md border border-background/20 shadow-lg bg-linear-to-br from-white/10 to-transparent pointer-events-none">
               <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Award className="w-5 h-5 text-primary" />
+                <CardTitle className="flex items-center space-x-2 font-serif">
                   <span>Skills & Expertise</span>
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="flex flex-wrap gap-2">
                   {skills.map((skill, index) => (
-                    <Badge key={index} variant="secondary" className="text-sm">
+                    <Badge key={index} variant="outline" className="text-sm">
                       {skill}
                     </Badge>
                   ))}
@@ -180,8 +179,7 @@ export default function AboutSection() {
             {/* Education */}
             <Card className="bg-background/10 backdrop-blur-md border border-background/20 shadow-lg bg-linear-to-br from-white/10 to-transparent pointer-events-none">
               <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <GraduationCap className="w-5 h-5 text-primary" />
+                <CardTitle className="flex items-center space-x-2 font-serif">
                   <span>Education</span>
                 </CardTitle>
               </CardHeader>

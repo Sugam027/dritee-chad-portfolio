@@ -2,7 +2,6 @@ import Experience from "@/components/experience";
 import { Hero } from "@/components/hero";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
 import { publications } from "@/lib/data/publications";
 import PublicationCard from "@/components/publicationCard";
@@ -22,9 +21,10 @@ export default function Home() {
       </div>
       <PublicationCard publication={latest} />
       <div className="text-center mt-8">
-        <Button size="lg">
-          <Link href={"/publications"}>View All Publications</Link>
+        <Button size="lg" variant={"outline"}>
+          <Link href="/publications">View All Publications</Link>
         </Button>
+        
       </div>
     </section>
 

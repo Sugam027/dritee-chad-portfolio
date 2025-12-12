@@ -36,8 +36,9 @@ export default function PublicationsCard({
   const getStatusColor = (status: string) => {
     switch (status) {
       case "Published": return "bg-primary text-primary-foreground";
-      case "Accepted": return "bg-research text-research-foreground";
-      case "Under Review": return "bg-muted text-muted-foreground";
+      case "Accepted": return "bg-secondary text-research-foreground";
+      case "Under Review": return "bg-accent text-muted-foreground";
+      case "Rejected": return "bg-destructive text-muted-foreground";
       default: return "bg-secondary text-secondary-foreground";
     }
   };
@@ -45,7 +46,7 @@ export default function PublicationsCard({
   return (
     <>
 
-    <Card key={publication.id} className="pointer-events-none">
+    <Card key={publication.id}>
     <CardHeader>
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
         <CardTitle className="text-lg font-serif publication-heading leading-tight">
@@ -147,12 +148,12 @@ export default function PublicationsCard({
             {/* Actions */}
             {publication.status === "Published" && (
             <div className="space-y-2">
-                <Button size="sm" className="w-full" variant="outline">
+                <Button size="sm" className="w-full" variant="ghost">
                 <ExternalLink className="h-4 w-4 mr-2" />
                 View Online
                 </Button>
                 {publication.downloadUrl && (
-                <Button size="sm" className="w-full" variant="outline">
+                <Button size="sm" className="w-full" variant="ghost">
                     <Download className="h-4 w-4 mr-2" />
                     Download PDF
                 </Button>

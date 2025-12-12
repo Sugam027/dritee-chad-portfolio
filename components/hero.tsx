@@ -14,7 +14,7 @@ export function Hero() {
   };
 
   return (
-    <section className="relative py-4 min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative py-4 min-h-[95vh] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
         <Image
@@ -42,7 +42,7 @@ export function Hero() {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
+            {/* <Button
               variant="ghost"
               size="lg"
               onClick={handleDownloadCV}
@@ -51,10 +51,10 @@ export function Hero() {
             >
               <Download className="mr-2 h-5 w-5" />
               Download CV
-            </Button>
+            </Button> */}
             <Link href="/research">
-              <Button size="lg" className="w-full sm:w-auto" data-testid="button-view-research">
-                <ArrowRight className="mr-2 h-5 w-5" />
+              <Button size="lg" className="w-full sm:w-auto group" data-testid="button-view-research">
+                <ArrowRight className="mr-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                 View Research
               </Button>
             </Link>

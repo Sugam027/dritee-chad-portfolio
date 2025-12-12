@@ -11,11 +11,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:hov-effect",
-        destructive: "bg-destructive text-destructive-foreground border border-destructive-border",
-        outline: "border border-button-outline bg-background/10 backdrop-blur-md shadow-lg ",
-        secondary: "bg-secondary text-secondary-foreground border border-secondary-border",
-        ghost: "border border-transparent bg-background/10 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted hover:bg-primary",
+        default: "bg-primary text-primary-foreground hover:border hover:border-button-outline hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
+        destructive: "bg-destructive text-destructive-foreground hover:border hover:border-button-outline hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
+        outline: "border border-button-outline bg-background/10 backdrop-blur-md shadow-lg text-primary-foreground hover:border-none hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
+        secondary: "bg-secondary text-secondary-foreground hover:border hover:border-button-outline hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
+        ghost: "border border-transparent bg-background/10 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted hover:border-button-outline",
       },
       size: {
         default: "min-h-9 px-4 py-2",
