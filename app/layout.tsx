@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${dmSerif.variable} ${notoSerif.variable} antialiased`}
       >
-        <div className="min-h-screen bg-background/99">
+        <div className="min-h-screen bg-secondary-background text-secondary-foreground flex flex-col">
           <Navigation />
           {children}
           <Footer />

@@ -15,7 +15,7 @@ const buttonVariants = cva(
         destructive: "bg-destructive text-destructive-foreground hover:border hover:border-button-outline hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
         outline: "border border-button-outline bg-background/10 backdrop-blur-md shadow-lg text-primary-foreground hover:border-none hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
         secondary: "bg-secondary text-secondary-foreground hover:border hover:border-button-outline hover:bg-background/10 hover:bg-linear-to-br hover:from-white/10 hover:to-transparent",
-        ghost: "border border-transparent bg-background/10 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted hover:border-button-outline",
+        ghost: "border border-transparent bg-secondary-background/90 backdrop-blur-md shadow-lg bg-linear-to-br from-white/10 to-transparent text-muted-dark hover:border-button-outline hover:ring-offset-2",
       },
       size: {
         default: "min-h-9 px-4 py-2",

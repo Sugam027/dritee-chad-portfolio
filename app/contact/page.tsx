@@ -25,29 +25,29 @@ export default function ContactPage() {
             {/* Contact Information & Social Links */}
             <div className="space-y-8">
                 {/* Contact Information */}
-                <p className="text-2xl font-serif font-bold mb-4 text-muted">
+                <p className="text-2xl font-serif font-bold mb-4 text-muted-dark">
                     Contact Information
                 </p>
-                <p className='text-muted-foreground mb-8'>
+                <p className='text-secondary-foreground mb-8'>
                   Whether you're interested in collaboration, have questions about my research, or just want to discuss forestry and environmental science, I'd love to hear from you. Feel free to reach out through any of the following methods:
                 </p>
                 <div className="space-y-4">
                     {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-center space-x-3">
-                      <div className="h-9 w-9 rounded-lg bg-primary flex items-center justify-center">
-                        <info.icon className="h-5 w-5 text-muted-foreground mt-0.5" />
+                      <div className="h-9 w-9 rounded-lg bg-background/10 flex items-center justify-center">
+                        <info.icon className="h-5 w-5 text-secondary-foreground mt-0.5" />
                       </div>
                         <div>
-                        <p className="font-medium text-sm text-muted">{info.label}</p>
+                        <p className="font-medium text-sm text-muted-dark">{info.label}</p>
                         {info.href ? (
                             <Link
                             href={info.href}
-                            className="text-sm text-muted-foreground hover:text-muted transition-colors"
+                            className="text-sm text-secondary-foreground hover:text-muted-dark transition-colors"
                             >
                             {info.value}
                             </Link>
                         ) : (
-                            <p className="text-sm text-muted-foreground">{info.value}</p>
+                            <p className="text-sm text-secondary-foreground">{info.value}</p>
                         )}
                         </div>
                     </div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                 </Card> */}
 
                 <div>
-                <p className="text-2xl font-serif font-bold mb-4 text-muted">
+                <p className="text-2xl font-serif font-bold mb-4 text-muted-dark">
                   Academic & Professional Profiles
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -96,12 +96,12 @@ export default function ContactPage() {
                         href={link.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-3 p-4 rounded-lg border border-button-outline hover:border-primary/50 hover:bg-primary/5 transition-all group"
+                        className="flex items-center space-x-3 p-4 rounded-lg border border-secondary-foreground hover:border-primary/50 hover:bg-primary/5 transition-all group"
                     >
-                      <link.icon className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                      <link.icon className="h-5 w-5 text-secondary-foreground group-hover:text-primary transition-colors" />
                       <div>
-                        <p className="font-medium text-muted text-sm">{link.name}</p>
-                        <p className="text-xs text-muted-foreground">{link.description}</p>
+                        <p className="font-medium text-muted-dark text-sm">{link.name}</p>
+                        <p className="text-xs text-secondary-foreground">{link.description}</p>
                       </div>
                     </Link>
                   ))}

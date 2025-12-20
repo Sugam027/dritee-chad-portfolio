@@ -35,9 +35,8 @@ export function Hero() {
               Research in
               <span className="block text-foreground">Forestry & Agriculture</span>
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Passionate forestry student dedicated to sustainable forest management, 
-              biodiversity conservation, and innovative agricultural practices for a greener future.
+            <p className="text-xl md:text-xl text-muted-foreground max-w-7xl mx-auto leading-relaxed">
+              An aspiring wildlife ecologist specializing in GIS, remote sensing, and spatial analysis for conservation. My work combines field-based monitoring using camera traps, sign surveys, and ecological assessments with geospatial tools to study wildlife distribution, habitat use, and landscape connectivity. 
             </p>
           </div>
 
@@ -62,7 +61,7 @@ export function Hero() {
               <Button
                 variant="ghost"
                 size="lg"
-                className="w-full sm:w-auto bg-background/10 backdrop-blur-sm"
+                className="w-full sm:w-auto bg-background/10 backdrop-blur-sm text-muted"
                 data-testid="button-contact"
               >
                 <Mail className="mr-2 h-5 w-5" />

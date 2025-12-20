@@ -8,9 +8,10 @@
   --color-elevate-1: rgba(255,255,255,0.04);
   --color-elevate-2: rgba(255,255,255,0.09);
 
-  --color-background: #293735;         
+  --color-background: #173624; 
+  --color-secondary-background: #D6E8D3;        
   --color-foreground: #3FC495;         
-  --color-border: #217D57;             
+  --color-border: #252723;             
   --color-card: #1a1a1a;               
   --color-card-foreground: #e6e6e6;    
   --color-card-border: #262626;        
@@ -30,7 +31,7 @@
   --color-primary: #217D57;             
   --color-primary-foreground: #f2f2f2;  
   --color-secondary: #6E8894;           
-  --color-secondary-foreground: #d9d9d9; 
+  --color-secondary-foreground: #252723; 
   --color-accent: #333138;           
   --color-accent-foreground: #d9d9d9;
   --color-destructive: #9A031E;     
@@ -39,8 +40,10 @@
   /* --color-muted-foreground: #DAECDB;     */
   --color-muted: #F4F4F9;    
 
-  --color-input: #404040;             
-  --color-ring: #87b88f;              
+  --color-muted-dark: #0B0B09;
+
+  --color-input: #F4F4F9;             
+  --color-ring: #F4F4F9;              
   --color-chart-1: #68a882;           
   --color-chart-2: #bfbf96;          
   --color-chart-3: #a99f66;           
@@ -64,9 +67,9 @@
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
   input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 1000px var(--color-background) inset !important;
-    box-shadow: 0 0 0 1000px var(--color-background) inset !important;
-    -webkit-text-fill-color: var(--color-card-foreground) !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--color-secondary-background) inset !important;
+    box-shadow: 0 0 0 1000px var(--color-secondary-background) inset !important;
+    -webkit-text-fill-color: var(--color-secondary-foreground) !important;
     transition: background-color 99999s ease-in-out 0s;
   }
 }

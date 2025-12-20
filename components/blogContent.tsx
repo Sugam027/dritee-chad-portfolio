@@ -60,11 +60,7 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
       </Card>
 
       {/* Posts */}
-      <div className="mt-8">
-        {filteredPosts.length === 0 && (
-          <p className="text-muted-foreground">No posts found.</p>
-        )}
-
+      <div>
         <section>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredPosts.map((post, index) => (
@@ -81,7 +77,7 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
                     </CardHeader>
                     <CardContent className="mt-auto">
                       <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-3 text-xs text-muted-foreground">
+                        <div className="flex items-center space-x-3 text-xs text-secondary-foreground">
                           <div className="flex items-center">
                             <Calendar className="mr-1 h-3 w-3" />
                             {post.publishDate}
@@ -115,6 +111,14 @@ export default function BlogContent({ posts }: { posts: BlogPost[] }) {
           </div>
         </section>
       </div>
+
+       {filteredPosts.length === 0 && (
+        <Card className="academic-card text-center">
+          <CardContent className="p-8">
+            <p className="text-secondary-foreground">No blogs found matching your criteria.</p>
+          </CardContent>
+        </Card>
+      )}
     </div>
   );
 }

@@ -20,13 +20,13 @@ export default function Experience(){
       date: "Aug 2024 – Mar 2025",},
   ];       
     return(
-        <section className="py-12">
+        <section className="py-12 bg-secondary-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-serif font-bold text-foreground mb-4">
               Professional Experience
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-secondary-foreground max-w-2xl mx-auto">
               Working with leading conservation organizations on wildlife monitoring and spatial analysis
             </p>
           </div>
@@ -38,16 +38,16 @@ export default function Experience(){
               <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
                     <div>
-                      <h3 className="font-semibold text-lg">{exp.title}</h3>
-                      <p className="text-sm text-muted-foreground">{exp.organization}</p>
+                      <h3 className="font-semibold text-muted-dark text-lg">{exp.title}</h3>
+                      <p className="text-sm text-secondary-foreground">{exp.organization}</p>
                     </div>
                   </div>
-                  <p className="text-muted-foreground text-sm">
+                  <p className="text-secondary-foreground text-sm">
                     {exp.description}
                   </p>
               </CardContent>
               <CardFooter className="mt-auto">
-                <span className="text-xs text-muted font-medium">{exp.date}</span>
+                <span className="text-xs text-muted-dark font-medium">{exp.date}</span>
               </CardFooter>
             </Card>
             ))}

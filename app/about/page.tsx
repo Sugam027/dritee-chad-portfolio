@@ -7,10 +7,11 @@ import Image from "next/image";
 export default function AboutSection() {
   // TODO: Remove mock functionality - replace with actual data
   const skills = [
-    "GIS & Remote Sensing",
-    "Data Analysis",
-    "Field Data Collection",
-    "Geospatial Database Management"
+    "Geospatial Tools",
+    "Quantitative Ecology",
+    "Field Methods",
+    "Remote Sensing",
+    "Conservation Practice",
   ];
 
   const education = [
@@ -40,6 +41,12 @@ export default function AboutSection() {
       organization: "Greenhood Nepal",
       period: "Aug 2024 – Mar 2025",
       description: "Conducted awareness programs on forest conservation"
+    },
+    {
+      role: "Intern",
+      organization: "Banke National Park",
+      period: "Jan 2023 – Jun 2023",
+      description: "Supporting spatial data collection and wildlife monitoring"
     }
   ];
 
@@ -60,7 +67,7 @@ export default function AboutSection() {
           {/* Left Column - Photo and Bio */}
           <div className="space-y-8">
             <div className="flex flex-col items-center lg:items-start space-y-6">
-                <Card className="academic-card bg-background/10 backdrop-blur-md border border-background/20 shadow-lg bg-linear-to-br from-white/10 to-transparent pointer-events-none">
+                <Card className="academic-card bg-background/10 backdrop-blur-md border border-background/20 shadow-lg bg-linear-to-br from-white/10 to-transparent pointer-events-none w-full">
                     <CardContent className="p-8">
                         <div className="flex flex-col md:flex-row gap-8">
                         {/* Profile Image Placeholder */}
@@ -77,24 +84,24 @@ export default function AboutSection() {
                         </div>
                         
                         <div className="flex-1">
-                            <h2 className="text-2xl font-serif font-bold mb-4 academic-heading">
+                            <h2 className="text-2xl font-serif font-bold mb-4 academic-heading text-muted-dark">
                             Dristee Chad
                             </h2>
-                            <p className="text-muted-foreground mb-4 flex items-center">
+                            <p className="text-secondary-foreground mb-4 flex items-center">
                             <GraduationCap className="h-4 w-4 mr-2" />
                             B.Sc. Forestry
                             </p>
-                            <p className="text-muted-foreground mb-6 flex items-center">
+                            <p className="text-secondary-foreground mb-6 flex items-center">
                             <MapPin className="h-4 w-4 mr-2" />
                             Tribhuvan University (2023)
                             </p>
                             
                             <div className="space-y-4">
-                            <div className="flex items-center gap-3 text-muted-foreground">
+                            <div className="flex items-center gap-3 text-secondary-foreground">
                                 <Mail className="h-4 w-4" />
                                 <span>dristeechad@gmail.com</span>
                             </div>
-                            <div className="flex items-center gap-3 text-muted-foreground">
+                            <div className="flex items-center gap-3 text-secondary-foreground">
                                 <Phone className="h-4 w-4" />
                                 <span>+977 9868918090</span>
                             </div>
@@ -104,29 +111,31 @@ export default function AboutSection() {
                     </CardContent>
                 </Card>
             </div>
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2 font-serif">
-                  <span>Experience</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-6">
-                  {volunteerExperience.map((exp, index) => (
-                    <div key={index} className="relative pl-6 border-l-2 border-muted">
-                      <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary" />
-                      <h4 className="font-medium">{exp.role}</h4>
-                      <p className="text-sm text-muted-foreground">{exp.organization}</p>
-                      <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
-                        <Calendar className="h-3 w-3" />
-                        {exp.period}
-                      </p>
-                      <p className="text-sm text-muted-foreground mt-2">{exp.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <div className="space-y-6">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2 font-serif text-muted-dark">
+                    <span>Experience</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6">
+                    {volunteerExperience.map((exp, index) => (
+                      <div key={index} className="relative pl-6 border-l-2 border-muted">
+                        <div className="absolute -left-2 top-0 w-4 h-4 rounded-full bg-primary" />
+                        <h4 className="font-medium text-muted-dark">{exp.role}</h4>
+                        <p className="text-sm text-secondary-foreground">{exp.organization}</p>
+                        <p className="text-xs text-secondary-foreground flex items-center gap-1 mt-1">
+                          <Calendar className="h-3 w-3" />
+                          {exp.period}
+                        </p>
+                        <p className="text-sm text-secondary-foreground mt-2">{exp.description}</p>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
 
             
           </div>
@@ -144,7 +153,7 @@ export default function AboutSection() {
                     </CardHeader>
                     <CardContent>
                       {about.map((para, i) => (
-                        <p key={i} className="text-muted-foreground leading-relaxed">
+                        <p key={i} className="text-secondary-foreground leading-relaxed">
                           {para}
                         </p>
                       ))}
@@ -181,9 +190,9 @@ export default function AboutSection() {
                   <div key={index} className="space-y-2">
                     <div className="flex items-start justify-between">
                       <div className="space-y-1">
-                        <h3 className="font-semibold text-muted">{edu.degree}</h3>
-                        <p className="text-muted-foreground">{edu.institution}</p>
-                        <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+                        <h3 className="font-semibold text-muted-dark">{edu.degree}</h3>
+                        <p className="text-secondary-foreground">{edu.institution}</p>
+                        <p className="text-xs text-secondary-foreground flex items-center gap-1 mt-1">
                           <Calendar className="h-3 w-3" />
                           {edu.year}
                         </p>

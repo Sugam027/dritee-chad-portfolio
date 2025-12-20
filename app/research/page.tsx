@@ -32,14 +32,14 @@ export default function ResearchSection() {
           </div>
           <div className="space-y-8">
             {research.map((project) => (
-              <Card key={project.id} className="hover-elevate transition-all duration-300 bg-background/10 backdrop-blur-md border border-background/20 shadow-lg bg-linear-to-br from-white/10 to-transparent">
+              <Card key={project.id} className="hover-elevate t">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                   <div className="lg:col-span-3">
                     <CardHeader>
                       <div className="flex items-start justify-between">
                         <div className="space-y-2">
                           <CardTitle className="text-xl font-serif">{project.title}</CardTitle>
-                          <div className="flex items-center space-x-4 text-sm text-muted-foreground">
+                          <div className="flex items-center space-x-4 text-sm text-secondary-foreground">
                             <div className="flex items-center space-x-1">
                               <Calendar className="w-4 h-4" />
                               <span>{project.duration}</span>
@@ -59,7 +59,7 @@ export default function ResearchSection() {
                       </div>
                     </CardHeader>
                     <CardContent className="space-y-4">
-                      <p className="text-muted-foreground">{project.description}</p>
+                      <p className="text-secondary-foreground">{project.description}</p>
                       
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag, tagIndex) => (
@@ -71,8 +71,8 @@ export default function ResearchSection() {
 
                       <div className="space-y-2">
                         <div className="flex items-center space-x-2 text-sm">
-                          <Users className="w-4 h-4 text-muted-foreground" />
-                          <span className="text-muted-foreground">Collaborators:</span>
+                          <Users className="w-4 h-4 text-secondary-foreground" />
+                          <span className="text-sedondary-foreground">Collaborators:</span>
                           <span>{project.collaborators.join(", ")}</span>
                         </div>
                       </div>

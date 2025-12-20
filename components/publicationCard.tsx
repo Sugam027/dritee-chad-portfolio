@@ -66,17 +66,17 @@ export default function PublicationsCard({
         <div className="lg:col-span-2 space-y-4">
             {/* Authors */}
             <div>
-            <p className="text-sm font-medium text-muted-foreground">Authors:</p>
+            <p className="text-sm font-medium text-secondary-foreground">Authors:</p>
             <p className="text-sm">{publication.authors.join(", ")}</p>
             </div>
 
             {/* Publication Details */}
             <div>
-            <p className="text-sm font-medium text-muted-foreground">Published in:</p>
+            <p className="text-sm font-medium text-secondary-foreground">Published in:</p>
             <p className="text-sm">
                 {publication.journal && (
                 <>
-                    <span className="font-medium">{publication.journal}</span>
+                    <span className="text-secondary-foreground">{publication.journal}</span>
                     {publication.volume && `, Vol. ${publication.volume}`}
                     {publication.issue && `, Issue ${publication.issue}`}
                     {publication.pages && `, pp. ${publication.pages}`}
@@ -99,15 +99,15 @@ export default function PublicationsCard({
 
             {/* Abstract */}
             <div>
-            <p className="text-sm font-medium text-muted-foreground">Abstract:</p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm font-medium text-secondary-foreground">Abstract:</p>
+            <p className="text-sm text-secondary-foreground leading-relaxed">
                 {publication.abstract}
             </p>
             </div>
 
             {/* Keywords */}
             <div>
-            <p className="text-sm font-medium text-muted-foreground mb-2">Keywords:</p>
+            <p className="text-sm font-medium text-secondary-foreground mb-2">Keywords:</p>
             <div className="flex flex-wrap gap-1">
                 {publication.keywords.map((keyword) => (
                 <Badge key={keyword} variant="outline" className="text-xs">
@@ -120,30 +120,24 @@ export default function PublicationsCard({
 
         <div className="space-y-4">
             {/* Publication Info */}
-            <div className="bg-background/90 p-4 rounded-lg space-y-3">
-            <div className="flex items-center text-sm">
-                <Calendar className="h-4 w-4 mr-2 text-primary" />
-                <span className="font-medium">{publication.year}</span>
-            </div>
-            
-            {publication.citations !== undefined && (
+            <div className="bg-secondary-background/90 p-4 rounded-lg space-y-3">
                 <div className="flex items-center text-sm">
-                <BookOpen className="h-4 w-4 mr-2 text-primary" />
-                <span>{publication.citations} citations</span>
+                    <Calendar className="h-4 w-4 mr-2 text-secondary-foreground" />
+                    <span className="font-medium">{publication.year}</span>
                 </div>
-            )}
+                
+                {publication.volume !== undefined && (
+                    <div className="flex items-center text-sm">
+                    <BookOpen className="h-4 w-4 mr-2 text-secondary-foreground" />
+                    <span>Vol {publication.volume}</span>
+                    </div>
+                )}
 
-            {publication.doi && (
-                <div className="text-xs text-muted-foreground">
-                <span className="font-medium">DOI:</span> {publication.doi}
-                </div>
-            )}
-
-            {publication.isbn && (
-                <div className="text-xs text-muted-foreground">
-                <span className="font-medium">ISBN:</span> {publication.isbn}
-                </div>
-            )}
+                {publication.doi && (
+                    <div className="text-xs text-secondary-foreground">
+                    <span className="font-medium">DOI:</span> {publication.doi}
+                    </div>
+                )}
             </div>
 
             {/* Actions */}

@@ -106,7 +106,7 @@ export default function PublicationsContent({
         <CardContent className="p-6">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1 relative">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-secondary-foreground" />
               <Input
                 placeholder="Search publications, authors, keywords..."
                 value={searchTerm}
@@ -152,7 +152,7 @@ export default function PublicationsContent({
       {filteredPublications.length === 0 && (
         <Card className="academic-card text-center">
           <CardContent className="p-8">
-            <p className="text-muted-foreground">No publications found matching your criteria.</p>
+            <p className="text-secondary-foreground">No publications found matching your criteria.</p>
           </CardContent>
         </Card>
       )}

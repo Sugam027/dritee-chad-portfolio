@@ -155,7 +155,7 @@ export default function ContactForm(){
                 />
               </div>
               
-              <Button type="submit" size="lg" disabled={isSubmitting} className="w-full">
+              <Button variant="ghost" type="submit" size="lg" disabled={isSubmitting} className="w-full">
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>
