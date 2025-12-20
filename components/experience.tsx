@@ -5,7 +5,7 @@ export default function Experience(){
   const experiences = [
     {
       title: "Project Officer",
-      organization: "SchEMS Consultancy",
+      organization: "SchEMS Consultancy Services",
       description: "Wildlife & GIS specialist working on Environmental Impact Assessments including the Siddhartha Highway Improvement Project.",
       date: "July 2025 - Present",},
     {
@@ -17,7 +17,7 @@ export default function Experience(){
       title: "Research Assistant",
       organization: "Greenhood Nepal",
       description: "Himalayan medicinal plant conservation and bear poaching research with community engagement.",
-      date: "2024 - 2025",},
+      date: "Aug 2024 – Mar 2025",},
   ];       
     return(
         <section className="py-12">

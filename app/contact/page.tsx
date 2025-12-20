@@ -17,7 +17,7 @@ export default function ContactPage() {
     <>
     <HeroSection
       title="Contact"
-      background="/herobackground.png"
+      background="./herobackground.png"
     />
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

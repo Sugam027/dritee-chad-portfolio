@@ -10,7 +10,6 @@ export const blogPosts = [
       readTime: "8 min read",
       tags: ["Sustainable Agriculture", "Technology", "Innovation"],
       category: "Research Insights",
-      featured: true
     },
     {
       id: 2,

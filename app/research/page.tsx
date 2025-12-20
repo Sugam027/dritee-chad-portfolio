@@ -19,7 +19,7 @@ export default function ResearchSection() {
       title="Research"
       subtitle="Exploring innovative approaches to forest science and sustainable management 
             through interdisciplinary research and field studies."
-      background="/herobackground.png"
+      background="./herobackground.png"
     />
     <section className="py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

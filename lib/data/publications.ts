@@ -1,51 +1,52 @@
 export const publications = [
 {
     id: 1,
-    title: "Sustainable Soil Management Practices in Organic Agriculture: A Comprehensive Review",
-    authors: ["J. Smith", "S. Johnson", "M. Chen"],
-    journal: "Journal of Sustainable Agriculture",
-    year: 2024,
-    volume: "48",
+    title: "Who’s active when and where? Unraveling the habitat use and temporal strategies of prey in a predator-human shared landscape",
+    authors: ["D. Chad, G. Adhikari, Y. B. Rawat, B. Dhami, M. S. Miya, B. Neupane"],
+    journal: "Global Ecology and Conservation",
+    year: 2025,
+    volume: "61",
     issue: "3",
     pages: "245-267",
     type: "Journal Article",
     status: "Published",
-    doi: "10.1080/10440046.2024.123456",
-    abstract: "This comprehensive review examines current sustainable soil management practices in organic agriculture, analyzing their effectiveness in maintaining soil health while optimizing crop yields. The study synthesizes data from over 100 research papers and field studies conducted between 2010-2023.",
-    keywords: ["Soil Management", "Organic Agriculture", "Sustainability", "Crop Yield"],
+    doi: "10.1016/j.gecco.2025.e03682",
+    abstract: "This study investigated the habitat associations and diel activity overlaps of six major prey species with both predators and humans in Banke National Park (BaNP), Nepal. ",
+    keywords: ["Camera trapping", "Crepuscular", "Human shield hypothesis", "Temporal overlap"],
     citations: 15,
-    downloadUrl: "#"
+    url: "https://doi.org/10.1016/j.gecco.2025.e03682"
 },
 {
     id: 2,
-    title: "Climate Change Adaptation Strategies for Temperate Forest Ecosystems",
+    title: "Spatial Dynamics and Risk Mapping of Forest Fires in Madhesh Province, Nepal",
     authors: ["J. Smith", "E. Wilson", "Forest Research Team"],
-    journal: "Forest Ecology and Management",
-    year: 2023,
-    volume: "512",
-    pages: "120145",
-    type: "Journal Article",
+    journal: "Environment and Natural Resources Journal",
+    year: 2025,
+    volume: "23(1)",
+    pages: "80-94",
+    type: "Research Article",
     status: "Published",
-    doi: "10.1016/j.foreco.2023.120145",
+    doi: "10.32526/ennrj/23/20240124",
     abstract: "This study presents adaptive management strategies for temperate forest ecosystems facing climate change. We analyzed species migration patterns and ecosystem resilience across 15 forest sites over a 10-year period.",
-    keywords: ["Climate Change", "Forest Management", "Ecosystem Adaptation", "Species Migration"],
+    keywords: ["AHP", "Forest fire", "GIS", "MODIS"],
     citations: 28,
-    downloadUrl: "#"
+    url: "https://doi.org/10.32526/ennrj/23/20240124"
 },
 {
     id: 3,
-    title: "IoT-Based Precision Agriculture: Real-time Monitoring and Decision Support Systems",
+    title: "First photographic record of Hoary-bellied Squirrel Callosciurus pygerythrus (I. Geoffroy Saint Hilaire, 1832) (Mammalia: Rodentia: Sciuridae) from Banke National Park, Nepal",
     authors: ["J. Smith", "Tech Innovation Lab", "R. Davis"],
     conference: "International Conference on Agricultural Technology",
-    year: 2024,
-    pages: "112-118",
+    year: "26 Nov 2023",
+    volume: "15(11)",
+    pages: "",
     type: "Conference Paper",
-    status: "Accepted",
-    doi: "10.1109/ICAT.2024.567890",
+    status: "Published",
+    doi: "10.11609/jott.8683.15.11.24284-24287",
     abstract: "This paper presents a novel IoT-based system for precision agriculture that integrates real-time environmental monitoring with machine learning algorithms to provide farmers with actionable insights for crop management.",
-    keywords: ["IoT", "Precision Agriculture", "Machine Learning", "Crop Monitoring"],
+    keywords: ["Endemism", "Evergreen Forests", "Least Concern", "Opportunistic Observation", "Photographic Evidence", "Rodent"],
     citations: 3,
-    downloadUrl: "#"
+    url: "https://doi.org/10.11609/jott.8683.15.11.24284-24287"
 },
 {
     id: 4,
@@ -57,7 +58,8 @@ export const publications = [
     status: "Under Review",
     abstract: "A comprehensive meta-analysis examining biodiversity patterns across different agroforestry systems compared to conventional monoculture farming. The study analyzes data from 150+ studies worldwide.",
     keywords: ["Biodiversity", "Agroforestry", "Meta-Analysis", "Conservation"],
-    citations: 0
+    citations: 0,
+    url: "#"
 },
 {
     id: 5,
@@ -74,7 +76,7 @@ export const publications = [
     abstract: "This research provides a comprehensive economic analysis of sustainable farming practices, evaluating their long-term financial viability compared to conventional farming methods.",
     keywords: ["Economic Analysis", "Sustainable Farming", "Cost-Benefit", "Agricultural Economics"],
     citations: 12,
-    downloadUrl: "#"
+    url: "https://doi.org/10.1016/j.gecco.2025.e03682"
 },
 {
     id: 6,
@@ -89,6 +91,6 @@ export const publications = [
     abstract: "This chapter explores the latest remote sensing technologies and their applications in monitoring forest health, detecting diseases, and assessing ecosystem changes over time.",
     keywords: ["Remote Sensing", "Forest Health", "GIS", "Ecosystem Monitoring"],
     citations: 7,
-    downloadUrl: "#"
+    url: "#"
 }
 ];

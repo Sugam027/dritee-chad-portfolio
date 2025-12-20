@@ -26,7 +26,7 @@ export default function PublicationsPage() {
       <HeroSection
         title="Publications"
         subtitle="Research contributions advancing knowledge in sustainable agriculture and forestry sciences"
-        background="/herobackground.png"
+        background="./herobackground.png"
       />
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">

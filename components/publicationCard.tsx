@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Download, Calendar, BookOpen, Search } from "lucide-react";
+import Link from "next/link";
 
 interface Publication {
   id: number;
@@ -23,7 +24,7 @@ interface Publication {
   abstract: string;
   keywords: string[];
   citations?: number;
-  downloadUrl?: string;
+  url?: string;
 }
 
 interface PublicationsCardProps {
@@ -148,16 +149,18 @@ export default function PublicationsCard({
             {/* Actions */}
             {publication.status === "Published" && (
             <div className="space-y-2">
-                <Button size="sm" className="w-full" variant="ghost">
-                <ExternalLink className="h-4 w-4 mr-2" />
-                View Online
-                </Button>
-                {publication.downloadUrl && (
+                <Link href={publication.url || "#"} target="_blank" rel="noopener noreferrer">
+                    <Button size="sm" className="w-full" variant="ghost">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    View Online
+                    </Button>
+                </Link>
+                {/* {publication.downloadUrl && (
                 <Button size="sm" className="w-full" variant="ghost">
                     <Download className="h-4 w-4 mr-2" />
                     Download PDF
                 </Button>
-                )}
+                )} */}
             </div>
             )}
         </div>

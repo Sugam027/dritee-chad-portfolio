@@ -15,7 +15,7 @@ export default function HeroSection({
   title,
   highlight,
   subtitle,
-  background = "/herobackground.png",
+  background,
   children
 }: HeroSectionProps) {
   return (
@@ -23,7 +23,8 @@ export default function HeroSection({
       {/* Background Image */}
       <div className="absolute inset-0 bg-cover bg-center bg-no-repeat">
         <Image
-          src={background}
+          src={background as string}
+          
           width={100}
           height={100}
           alt="Hero Background"

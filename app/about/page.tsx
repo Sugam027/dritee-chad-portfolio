@@ -7,53 +7,51 @@ import Image from "next/image";
 export default function AboutSection() {
   // TODO: Remove mock functionality - replace with actual data
   const skills = [
-    "Forest Ecology",
     "GIS & Remote Sensing",
-    "Statistical Analysis",
-    "Field Research",
-    "Data Collection",
-    "Scientific Writing",
-    "Forest Management",
-    "Biodiversity Assessment",
-    "R Programming",
-    "Environmental Monitoring"
+    "Data Analysis",
+    "Field Data Collection",
+    "Geospatial Database Management"
   ];
 
   const education = [
     {
-      degree: "Master of Science in Forestry",
-      institution: "University of Forestry Sciences",
-      year: "2024-2026",
-      status: "In Progress"
-    },
-    {
-      degree: "Bachelor of Science in Agriculture",
-      institution: "Agricultural University",
-      year: "2020-2024",
+      degree: "Bachelor of Science in Forestry",
+      institution: "Institute of Forestry, Tribhuvan University, Kathmandu Nepal",
+      year: "2019-2023",
       status: "Completed"
     }
   ];
 
     const volunteerExperience = [
     {
-      role: "Field Volunteer",
-      organization: "National Trust for Nature Conservation",
-      period: "2019 - 2020",
+      role: "Project Officer (Wildlife & GIS) ",
+      organization: "SchEMS Consultancy Services ",
+      period: "July 2025 - Present",
       description: "Assisted in wildlife monitoring and community engagement programs"
     },
     {
-      role: "Research Assistant",
-      organization: "Bird Conservation Nepal",
-      period: "2018 - 2019",
+      role: "Data Analyst",
+      organization: "WWF Nepal",
+      period: "May 2025 - June 2025",
       description: "Supported bird census and habitat assessment activities"
     },
     {
-      role: "Environmental Educator",
-      organization: "Local Community Forest User Group",
-      period: "2017 - 2018",
+      role: "Research Assistant",
+      organization: "Greenhood Nepal",
+      period: "Aug 2024 – Mar 2025",
       description: "Conducted awareness programs on forest conservation"
     }
   ];
+
+  const about = [
+    "I am a wildlife ecologist with a strong background in GIS and Remote Sensing applications for conservation science. My research focuses on understanding how carnivores and their prey interact with dynamic landscapes, using advanced tools such as camera trap data analysis, occupancy modeling, and spatial habitat assessments.",
+    "Over the past several years, I have worked across Nepal’s diverse ecosystems from the grasslands and wetlands of the Terai Arc Landscape to the high altitude habitats of the Himalayas. My projects have covered a wide range of themes, including tiger occupancy studies, snow leopard prey dynamics, wetland monitoring, forest fire risk mapping, and medicinal plant conservation.",
+    "Beyond technical research, I am passionate about community based conservation, recognizing that local stewardship is vital for long term ecological sustainability. I aim to bridge rigorous science with actionable conservation strategies that benefit both wildlife and people.",
+    "Currently, my work integrates carnivore ecology, geospatial analysis, and conservation planning with an emphasis on using spatial data to guide policy and management decisions.",
+    "When I’m not in the field or immersed in spatial data, I enjoy hiking, trekking, and collecting wildlife photographs. I also find joy in writing, mentoring students, and contributing to collaborative conservation initiatives across Nepal and beyond.",
+    "Through my work, I aim to combine quantitative ecology, field research, and geospatial technologies to support evidence based wildlife conservation in human dominated landscapes."
+  ];
+
 
   return (
     <section className="py-8">
@@ -80,25 +78,25 @@ export default function AboutSection() {
                         
                         <div className="flex-1">
                             <h2 className="text-2xl font-serif font-bold mb-4 academic-heading">
-                            John Smith
+                            Dristee Chad
                             </h2>
                             <p className="text-muted-foreground mb-4 flex items-center">
                             <GraduationCap className="h-4 w-4 mr-2" />
-                            Agriculture & Forestry Student
+                            B.Sc. Forestry
                             </p>
                             <p className="text-muted-foreground mb-6 flex items-center">
                             <MapPin className="h-4 w-4 mr-2" />
-                            University of Excellence, State
+                            Tribhuvan University (2023)
                             </p>
                             
                             <div className="space-y-4">
-                            <div className="flex items-center gap-3">
-                                <Mail className="h-4 w-4 text-primary" />
-                                <span>john.smith@university.edu</span>
+                            <div className="flex items-center gap-3 text-muted-foreground">
+                                <Mail className="h-4 w-4" />
+                                <span>dristeechad@gmail.com</span>
                             </div>
-                            <div className="flex items-center gap-3">
-                                <Phone className="h-4 w-4 text-primary" />
-                                <span>+1 (555) 123-4567</span>
+                            <div className="flex items-center gap-3 text-muted-foreground">
+                                <Phone className="h-4 w-4" />
+                                <span>+977 9868918090</span>
                             </div>
                             </div>
                         </div>
@@ -145,16 +143,11 @@ export default function AboutSection() {
                         </CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <p className="text-muted-foreground leading-relaxed">
-                            I am a passionate forestry graduate student with a deep commitment to understanding 
-                            and preserving our natural ecosystems. My research focuses on sustainable forest 
-                            management practices and their impact on biodiversity conservation.
+                      {about.map((para, i) => (
+                        <p key={i} className="text-muted-foreground leading-relaxed">
+                          {para}
                         </p>
-                        <p className="text-muted-foreground leading-relaxed">
-                            With hands-on experience in field research, GIS analysis, and statistical modeling, 
-                            I strive to contribute meaningful insights to the field of forestry and environmental science. 
-                            My work aims to bridge the gap between traditional forest management and modern conservation strategies.
-                        </p>
+                      ))}
                     </CardContent>
                 </div>
             </Card>
@@ -190,7 +183,11 @@ export default function AboutSection() {
                       <div className="space-y-1">
                         <h3 className="font-semibold text-muted">{edu.degree}</h3>
                         <p className="text-muted-foreground">{edu.institution}</p>
-                        <p className="text-sm text-muted-foreground">{edu.year}</p>
+                        <p className="text-xs text-muted-foreground flex items-center gap-1 mt-1">
+                          <Calendar className="h-3 w-3" />
+                          {edu.year}
+                        </p>
+                       
                       </div>
                       <Badge variant={edu.status === "Completed" ? "default" : "secondary"}>
                         {edu.status}
